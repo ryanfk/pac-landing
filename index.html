@@ -259,30 +259,44 @@ body::before {
 }
 .who-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: 36px;
   align-items: center;
   background: var(--pac-cream-light);
   border: 3px solid var(--pac-navy);
   border-radius: 4px;
-  padding: 36px 36px;
+  padding: 56px 48px;
   box-shadow: 5px 5px 0 var(--pac-orange);
   position: relative;
   overflow: hidden;
+  text-align: center;
+}
+.who-grid::before {
+  content: "";
+  position: absolute;
+  left: -30px; bottom: -30px;
+  width: 320px; height: 320px;
+  background-image: url("https://ryanfk.github.io/pac-landing/assets/art/family-silhouette.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  opacity: 0.16;
+  pointer-events: none;
 }
 .who-grid::after {
   content: "";
   position: absolute;
-  right: 80px; bottom: -40px;
+  right: -30px; top: -30px;
   width: 220px; height: 220px;
   background-image: url("https://ryanfk.github.io/pac-landing/assets/art/family-silhouette.png");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: bottom right;
+  background-position: top right;
   opacity: 0.10;
+  transform: scaleX(-1);
   pointer-events: none;
 }
-.who-art img { width: 100%; max-width: 360px; margin: 0 auto; }
+.who-text { position: relative; z-index: 1; max-width: 560px; margin: 0 auto; }
 .who-text h2 {
   font-family: var(--pac-display);
   color: var(--pac-navy);
@@ -563,9 +577,9 @@ footer .built-on a:hover { color: var(--pac-orange); }
   .lede { margin-left: auto; margin-right: auto; }
   .cta-row { justify-content: center; }
   .what-grid { grid-template-columns: 1fr; }
-  .who-grid { grid-template-columns: 1fr; padding: 28px 24px; }
-  .who-text { text-align: center; }
-  .who-art { order: -1; }
+  .who-grid { padding: 40px 24px; }
+  .who-grid::before { width: 240px; height: 240px; left: -20px; bottom: -20px; opacity: 0.14; }
+  .who-grid::after { width: 160px; height: 160px; right: -20px; top: -20px; opacity: 0.08; }
   .signup-stars img { width: 76px; }
   .signup-stars { top: -34px; }
   .signup-stars .star-l { left: -22px; }
@@ -677,9 +691,6 @@ footer .built-on a:hover { color: var(--pac-orange); }
 
 <section class="who">
   <div class="who-grid">
-    <div class="who-art">
-      <img src="https://ryanfk.github.io/pac-landing/assets/art/family.png" alt="A young family — dad with son on his shoulders, mom alongside.">
-    </div>
     <div class="who-text">
       <h2>Bring the family.</h2>
       <p>
