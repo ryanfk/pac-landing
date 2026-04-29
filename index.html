@@ -534,11 +534,25 @@ footer {
   text-align: center;
   font-size: 13px;
   color: var(--pac-ink);
-  opacity: 0.7;
   max-width: 760px;
   padding: 0 20px;
 }
 footer a { color: var(--pac-navy); }
+footer .footer-line { margin: 0 0 10px; opacity: 0.7; }
+footer .built-on {
+  margin: 0;
+  font-family: var(--pac-subdisplay);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 11px;
+  opacity: 0.55;
+}
+footer .built-on a {
+  color: var(--pac-navy);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+footer .built-on a:hover { color: var(--pac-orange); }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 880px) {
@@ -735,9 +749,14 @@ footer a { color: var(--pac-navy); }
   </p>
 </div>
 
-<footer>
-  The PAC &middot; A young-families gathering at Immaculate Conception, East Aurora, NY &middot;
-  <a href="mailto:faith.formation@immaculateconception.org">faith.formation@immaculateconception.org</a>
+<footer role="contentinfo">
+  <p class="footer-line">
+    The PAC &middot; A young-families gathering at Immaculate Conception, East Aurora, NY &middot;
+    <a href="mailto:faith.formation@immaculateconception.org">faith.formation@immaculateconception.org</a>
+  </p>
+  <p class="built-on">
+    Built on <a href="https://go.helmcode.dev/from-pac/" rel="noopener">Helm</a>.
+  </p>
 </footer>
 
 </body>
