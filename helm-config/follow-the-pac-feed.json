@@ -1,0 +1,37 @@
+{
+  "_comment": "Spec for the 'Follow the PAC' Helm mailer feed. Apply via the Helm MCP `create_feed` tool against the PAC project, or create manually in the Helm Dashboard under Marketing > Feeds.",
+  "feed": {
+    "name": "Follow the PAC",
+    "slug": "follow-the-pac",
+    "description": "Monthly note ahead of each PAC gathering — date, time, what to bring, and the occasional behind-the-scenes from the families building it. Right after the 9:30 Mass at Immaculate Conception, East Aurora.",
+    "active": true
+  },
+  "signup_form": {
+    "fields": [
+      {"name": "first_name", "label": "First name", "required": false},
+      {"name": "email", "label": "Email", "required": true}
+    ],
+    "submit_label": "COUNT ME IN",
+    "consent_text": "One click to unsubscribe whenever. We'll never share your address.",
+    "success_message": "★ YOU'RE ON THE LIST.\n\nSee you in the gym after the 9:30. Watch for the next note.\n\n(In the meantime — tell another family.)"
+  },
+  "welcome_email": {
+    "_note": "First touch after signup. Send via send_email or schedule for ~5 minutes after subscribe.",
+    "subject": "You're on the list — Follow the PAC",
+    "body_html": "<div style=\"font-family:'Gill Sans','Avenir Next',sans-serif; color:#0A3F58; background:#EFD7A4; padding:24px;\">\n<h1 style=\"font-family:'Alfa Slab One',Impact,serif; color:#D2580A; text-transform:uppercase; letter-spacing:0.02em; margin:0 0 8px 0;\">Follow the PAC</h1>\n<p style=\"margin:0 0 16px 0;\">Hey {first_name} — glad you're in.</p>\n<p>Here's what \u2018Follow the PAC\u2019 is: about one short email a month, ahead of each gathering. Date, time, what to bring, and the occasional note from the families building this thing.</p>\n<p><strong>Next PAC:</strong> Sunday, May 3 \u2014 right after the 9:30 Mass, in the gym.<br/><strong>What to bring:</strong> the kids and whatever joy you have left after getting them to Mass.</p>\n<p>That's it for now. See you Sunday.</p>\n<p style=\"margin-top:24px;\">\u2014 The PAC</p>\n<hr style=\"border:none; border-top:1px solid #0A3F58; opacity:0.2; margin:24px 0;\"/>\n<p style=\"font-size:13px; opacity:0.8;\">Immaculate Conception, East Aurora, NY. <a href=\"{preferences_url}\" style=\"color:#0A3F58;\">Manage preferences</a>.</p>\n</div>",
+    "body_text": "Hey {first_name} — glad you're in.\n\nHere's what 'Follow the PAC' is: about one short email a month, ahead of each gathering. Date, time, what to bring, and the occasional note from the families building this thing.\n\nNext PAC: Sunday, May 3 — right after the 9:30 Mass, in the gym.\nWhat to bring: the kids and whatever joy you have left after getting them to Mass.\n\nThat's it for now. See you Sunday.\n\n— The PAC\n\nImmaculate Conception, East Aurora, NY. Manage preferences: {preferences_url}"
+  },
+  "monthly_template": {
+    "_note": "Template to schedule ~7 days before each PAC. Fill in date and what-to-bring.",
+    "subject": "Sunday: PAC — {first_name}, the kids, and the gym",
+    "body_html_skeleton": "<div style=\"font-family:'Gill Sans','Avenir Next',sans-serif; color:#0A3F58; background:#EFD7A4; padding:24px;\">\n<h1 style=\"font-family:'Alfa Slab One',Impact,serif; color:#D2580A; text-transform:uppercase; letter-spacing:0.02em; margin:0 0 8px 0;\">PAC \u2014 [MONTH DAY]</h1>\n<p>Hey {first_name} \u2014</p>\n<p>This Sunday. Right after the 9:30 Mass, in the gym.</p>\n<p><strong>What to bring:</strong> [WHAT TO BRING].</p>\n<p>See you in there.</p>\n<p style=\"margin-top:24px;\">\u2014 The PAC</p>\n</div>"
+  },
+  "voice_check": [
+    "Subject lines: short, concrete, never 'Don't miss out!' or '\u2728 Exciting news!'",
+    "Greeting: 'Hey {first_name}' — fallback 'Hey there' is acceptable",
+    "No 'Dear friend in Christ' / 'Beloved parishioner' / 'Faith family' openers",
+    "Sign-off: '— The PAC'. Avoid 'Blessings' / 'In Christ'.",
+    "Logistics block always includes 'after the 9:30 Mass' and 'in the gym'",
+    "End every monthly with a tiny contribution opener — 'tell another family', 'bring a snack', 'come help set up'"
+  ]
+}

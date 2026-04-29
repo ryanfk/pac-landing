@@ -1,0 +1,78 @@
+{
+  "_comment": "Derived from PACFlyer-OpeningAnnouncement-5-3.png (sampled 2026-04-28). These are the executed brand colors and type — they replace the abstract values in the brand-identity skill assets/palette.json with the actually-shipped flyer values.",
+  "name": "PAC",
+  "version": "1.0.0",
+  "source": "PACFlyer-OpeningAnnouncement-5-3.png",
+  "colors": {
+    "navy": {
+      "hex": "#0A3F58",
+      "rgb": [10, 63, 88],
+      "role": "primary",
+      "use": "Page anchor, headlines on light fields, hero background, form block"
+    },
+    "burnt_orange": {
+      "hex": "#D2580A",
+      "rgb": [210, 88, 10],
+      "role": "secondary",
+      "use": "Display headlines, CTA buttons, accents"
+    },
+    "cream": {
+      "hex": "#EFD7A4",
+      "rgb": [239, 215, 164],
+      "role": "background",
+      "use": "Default page ground; replaces white globally"
+    },
+    "golden_yellow": {
+      "hex": "#F5C84A",
+      "rgb": [245, 200, 74],
+      "role": "accent",
+      "use": "Stars, label highlights, hover states"
+    },
+    "navy_dark": {
+      "hex": "#0A1E32",
+      "rgb": [10, 30, 50],
+      "role": "ink",
+      "use": "Body text on cream when navy is too light"
+    }
+  },
+  "typography": {
+    "display": {
+      "primary_family": "Alfa Slab One",
+      "fallbacks": ["Rye", "Bevan", "Ultra", "Bowlby One", "Impact", "serif"],
+      "google_fonts_url": "https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap",
+      "use": "PAC headlines, FAITH FAMILY FELLOWSHIP & FUN, FOLLOW THE PAC, COUNT ME IN button — vintage chunky slab",
+      "transform": "uppercase",
+      "letter_spacing": "0.01em"
+    },
+    "subdisplay": {
+      "primary_family": "League Gothic",
+      "fallbacks": ["Oswald", "Anton", "Bebas Neue", "Impact", "sans-serif"],
+      "google_fonts_url": "https://fonts.googleapis.com/css2?family=League+Gothic&display=swap",
+      "use": "Subhead lines like 'IS COMING SOON TO IMMACULATE CONCEPTION' — condensed bold sans",
+      "transform": "uppercase"
+    },
+    "body": {
+      "primary_family": "Gill Sans",
+      "fallbacks": ["Avenir Next", "Source Sans 3", "Source Sans Pro", "Helvetica Neue", "sans-serif"],
+      "google_fonts_url": "https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap",
+      "use": "Body, form labels, reassurance line, footer — humanist sans"
+    }
+  },
+  "tokens_css": {
+    "--pac-navy": "#0A3F58",
+    "--pac-orange": "#D2580A",
+    "--pac-cream": "#EFD7A4",
+    "--pac-yellow": "#F5C84A",
+    "--pac-ink": "#0A1E32",
+    "--pac-display": "'Alfa Slab One', 'Rye', 'Bevan', Impact, serif",
+    "--pac-subdisplay": "'League Gothic', 'Oswald', 'Bebas Neue', Impact, sans-serif",
+    "--pac-body": "'Gill Sans', 'Avenir Next', 'Source Sans 3', sans-serif"
+  },
+  "rules": [
+    "Page background defaults to cream (#EFD7A4); white reads sterile and breaks the vintage feel.",
+    "Navy + burnt orange is the workhorse pairing.",
+    "Golden yellow is a spice — never carries body text.",
+    "No pastels. No Comic Sans / Curlz / Papyrus. No clip-art saints. No drop shadows or gradients.",
+    "Display type uses generous tracking and is encouraged in all caps."
+  ]
+}
