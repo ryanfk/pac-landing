@@ -543,6 +543,54 @@ form.subscribe button:hover { filter: brightness(1.08); }
 }
 .print-link a { color: var(--pac-navy); }
 
+/* ---------- Feedback / Survey QR ---------- */
+.feedback-wrap {
+  max-width: 760px;
+  margin: 56px auto 0;
+  padding: 0 20px;
+}
+.feedback {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 32px;
+  align-items: center;
+  background: var(--pac-cream-light);
+  border: 3px solid var(--pac-navy);
+  border-radius: 4px;
+  padding: 28px 32px;
+  box-shadow: 5px 5px 0 var(--pac-orange);
+}
+.feedback-text h2 {
+  font-family: var(--pac-display);
+  color: var(--pac-orange);
+  font-size: clamp(28px, 4vw, 36px);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  margin: 0 0 10px;
+  line-height: 1;
+}
+.feedback-text p { margin: 0 0 10px; font-size: 17px; }
+.feedback-text p:last-child { margin: 0; }
+.feedback-url { font-size: 15px; color: var(--pac-ink); }
+.feedback-url a {
+  font-weight: 700;
+  color: var(--pac-navy);
+  text-decoration: none;
+  border-bottom: 2px solid var(--pac-navy);
+}
+.feedback-url a:hover { color: var(--pac-orange); border-color: var(--pac-orange); }
+.feedback-qr {
+  display: block;
+  background: white;
+  border: 3px solid var(--pac-navy);
+  border-radius: 4px;
+  padding: 6px;
+  width: 168px;
+  height: 168px;
+  flex-shrink: 0;
+}
+.feedback-qr img { width: 100%; height: 100%; display: block; }
+
 /* ---------- Footer ---------- */
 footer {
   margin: 64px auto 32px;
@@ -584,6 +632,8 @@ footer .built-on a:hover { color: var(--pac-orange); }
   .signup-stars { top: -34px; }
   .signup-stars .star-l { left: -22px; }
   .signup-stars .star-r { right: -22px; }
+  .feedback { grid-template-columns: 1fr; text-align: center; justify-items: center; padding: 28px 24px; }
+  .feedback-qr { margin: 0 auto; }
 }
 @media (max-width: 520px) {
   .topbar { padding: 16px 16px 0; gap: 10px; }
@@ -622,6 +672,9 @@ footer .built-on a:hover { color: var(--pac-orange); }
   .card, .who-grid, .signup { box-shadow: 4px 4px 0 var(--pac-navy); }
   .who-grid { box-shadow: 4px 4px 0 var(--pac-orange); }
   .signup { box-shadow: 4px 4px 0 var(--pac-orange); }
+  .feedback-wrap { padding: 0 16px; }
+  .feedback { padding: 24px 20px; box-shadow: 4px 4px 0 var(--pac-orange); }
+  .feedback-qr { width: 156px; height: 156px; }
 }
 </style>
 </head>
@@ -761,6 +814,21 @@ footer .built-on a:hover { color: var(--pac-orange); }
     <a href="https://ryanfk.github.io/pac-landing/flyer-hero.jpg" download>Download the printable flyer →</a>
   </p>
 </div>
+
+<section class="feedback-wrap" aria-labelledby="feedback-heading">
+  <div class="feedback">
+    <div class="feedback-text">
+      <h2 id="feedback-heading">Shape next season.</h2>
+      <p>Two minutes of honest feedback. We&rsquo;ll use it.</p>
+      <p class="feedback-url">
+        Scan the code, or visit <a href="https://go.playafter.church/survey/">go.playafter.church/survey</a>
+      </p>
+    </div>
+    <a class="feedback-qr" href="https://go.playafter.church/survey/" aria-label="Open the PAC feedback survey">
+      <img src="https://ryanfk.github.io/pac-landing/assets/art/survey-qr.png" alt="QR code linking to the PAC feedback survey" width="180" height="180">
+    </a>
+  </div>
+</section>
 
 <footer role="contentinfo">
   <p class="footer-line">
